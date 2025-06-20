@@ -1,0 +1,149 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+ 
+  .container {
+    width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+    padding: 20px;
+  }
+  
+  #footer {
+    position: relative;
+    background: linear-gradient(to bottom, #007bff, #0056b3);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    overflow: hidden;
+  }
+  
+ 
+  #footer::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #007bff;
+    clip-path: ellipse(70% 100% at 50% 100%);
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #343a40;
+  }
+  
+
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #ffffff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  #item {
+    font-weight: bold;
+    text-decoration: none;
+    color: #007bff;
+    margin-right: 10px;
+  }
+  
+  #item:hover {
+    text-decoration: underline;
+  }
+  
+  form.delete-form {
+    margin: 0;
+  }
+  
+  button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  button:hover {
+    background-color: #c82333;
+  }
+  
+  button.add-btn {
+    background-color: #28a745;
+    margin-top: 20px;
+  }
+  
+  button.add-btn:hover {
+    background-color: #218838;
+  }
+  
+  form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  #head-container {
+    display: flex;
+    margin-bottom: 10%;
+    justify-content: space-between;
+
+  }
+  
+  @media (max-width: 600px) {
+    li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    #item {
+      margin-bottom: 10px;
+    }
+  }
+
+#footer {
+    position: relative;
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 60px 20px 20px; 
+    margin-top: auto;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .wave {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: white;
+    border-bottom-left-radius: 100% 60px;
+    border-bottom-right-radius: 100% 60px;
+  }
+  

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="head-container">
+    <h2 id="title">Articles</h2>
+    <form action="/add" method="GET">
+        <button type="submit" class="add-btn">Add Post</button>
+      </form>
+      </div>
+<div id="body-container">
+    <% if (posts.length === 0) { %>
+      <p>No posts to display</p>
+    <% } else { %>
+      <ul>
+        <% posts.forEach((post, index) => { %>
+          <li>
+            <a id="item" href="/post/<%= index %>"><%= post.title %></a>
+            <form class="delete-form" action="/delete/<%= index %>" method="post">
+              <button type="submit">Delete</button>
+            </form>
+          </li>
+        <% }); %>
+      </ul>
+    <% } %>
+</div>
+  </div>
+
+  <%- include("footer") %>
+</body>
+</html>
+
