@@ -33,9 +33,7 @@ app.use(passport.session());
 
 const db = new pg.Client({
     connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
+  ssl: true
 });
 
 db.connect()
