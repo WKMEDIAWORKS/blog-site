@@ -10,9 +10,14 @@
   <div class="container">
     <div id="head-container">
     <h2 id="title">Articles</h2>
+    <div class="header-container">
     <form action="/add" method="GET">
         <button type="submit" class="add-btn">Add Post</button>
       </form>
+      <form action="/logout" method="GET">
+        <button type="submit" class="logout-btn">Logout</button>
+      </form>
+      </div>
       </div>
 <div id="body-container">
     <% if (posts.length === 0) { %>
@@ -21,10 +26,15 @@
       <ul>
         <% posts.forEach((post, index) => { %>
           <li>
-            <a id="item" href="/post/<%= index %>"><%= post.title %></a>
-            <form class="delete-form" action="/delete/<%= index %>" method="post">
+            <a id="item" href="/post/<%= post.id %>"><%= post.title %></a>
+            <div id="button-container">
+            <form class="delete-form" action="/delete/<%= post.id %>" method="post">
               <button type="submit">Delete</button>
             </form>
+            <form class="edit-form" action="/edit/<%= post.id %>" method="post">
+              <button type="submit" id="edit-btn">Edit</button>
+            </form>
+          </div>
           </li>
         <% }); %>
       </ul>
